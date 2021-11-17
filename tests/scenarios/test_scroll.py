@@ -15,7 +15,7 @@ def test_browser():
     yield browser
 
 
-@given('i am launching chrome browser')
+@given('I am launching chrome browser')
 def test_home(test_browser):
     test_browser.get(PHP_TRAVELS_HOME)
 
@@ -27,6 +27,7 @@ def perform_mousehover(test_browser):
     test_browser.find_element_by_xpath("//div[@class='whatsapp wow flash animated']//*[name()='svg']")
     test_browser.switch_to.frame("chat-widget")
     test_browser.find_element_by_xpath("//button[@class='e1mwfyk10 lc-kd6d3b e1m5b1js0']")
+
 
 @then("I am closing the browser")
 def test_results(test_browser):

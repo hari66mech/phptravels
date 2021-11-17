@@ -15,12 +15,12 @@ def test_browser():
     yield browser
 
 
-@given('i am launching chrome browser')
+@given('I am launching chrome browser')
 def test_home(test_browser):
     test_browser.get(PHP_TRAVELS_HOME)
 
 
-@when("login as the valid credential")
+@when("Login as the valid credential")
 def test_login(test_browser):
     search_input = test_browser.find_element_by_xpath('//a[text()="Login"]')
     search_input.click()
@@ -39,7 +39,7 @@ def test_login(test_browser):
     login.click()
 
 
-@then("redirect to the home page")
+@then("Redirect to the home page")
 def test_results(test_browser):
     assert test_browser.title == 'Login - PHPTRAVELS'
     test_browser.quit()

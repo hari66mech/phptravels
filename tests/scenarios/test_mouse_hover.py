@@ -13,15 +13,14 @@ scenarios(r'C:\Users\harikrishna.manokara\PycharmProjects\phptravel\tests\featur
 def test_browser():
     browser = webdriver.Chrome(r"D:\New folder\chromedriver.exe")
     browser.implicitly_wait(10)
-    yield browser
 
 
-@given('i am launching chrome browser')
+@given('I am launching chrome browser')
 def test_home(test_browser):
     test_browser.get(PHP_TRAVELS_HOME)
 
 
-@when("verify the hover of the submenu tab")
+@when("Verify the hover of the submenu tab")
 def perform_mousehover(test_browser):
     action = ActionChains(test_browser)
     demo = action.move_to_element(test_browser.find_element_by_xpath("//a[text()='Demo']"))

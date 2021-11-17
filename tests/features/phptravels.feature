@@ -1,6 +1,6 @@
 Feature: The php travels login
 
-    Scenario: verify the user login with valid credential
-        Given i am launching chrome browser
-        When login as the valid credential
-        Then redirect to the home page
+    Scenario: Verify the user login with valid credential
+        Given I am launching chrome browser
+        When Login as the valid credential
+        Then Redirect to the home page
